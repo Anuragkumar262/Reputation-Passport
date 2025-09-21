@@ -1,0 +1,64 @@
+{
+  "name": "reputation-passport",
+  "version": "1.0.0",
+  "description": "Decentralized reputation system for gig workers using blockchain technology",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:ganache": "hardhat run scripts/deploy.js --network ganache",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "clean": "hardhat clean",
+    "frontend": "cd frontend && python -m http.server 3000",
+    "dev": "concurrently \"npm run node\" \"npm run frontend\"",
+    "setup": "npm install && mkdir -p contracts test scripts frontend",
+    "ganache": "echo 'Please start Ganache manually on port 7545'"
+  },
+  "keywords": [
+    "blockchain",
+    "web3",
+    "reputation",
+    "gig-economy",
+    "smart-contracts",
+    "ethereum",
+    "solidity",
+    "hackathon"
+  ],
+  "author": "Hackathon Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.17.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.1",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-team/reputation-passport.git"
+  },
+  "directories": {
+    "contracts": "./contracts",
+    "test": "./test",
+    "scripts": "./scripts",
+    "frontend": "./frontend"
+  }
+}
